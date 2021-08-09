@@ -1,0 +1,15 @@
+[Unit]
+Description=Sinatra application
+
+[Service]
+Environment="HOST=localhost"
+Environment="USERNAME=fajar"
+Environment="PASSWORD=generasiGIGIH100%"
+Environment="DB_NAME=food_oms_db"
+User=root
+WorkingDirectory=/app/
+ExecStart=/home/vagrant/.rbenv/versions/3.0.1/bin/ruby main.rb
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
